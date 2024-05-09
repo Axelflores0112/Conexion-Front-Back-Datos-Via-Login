@@ -14,7 +14,7 @@ interface Animes {
 
 function form() {
     const [email, setEmail] = useState<string>("")
-    const [password, setPassword] = useState<string>("")
+    const [password, setPassword] = useState<string>("")//
     const [sesion, setSesion] = useState<boolean>(false)//bandera para la sesion
     const [animes, setAnimes] = useState<Animes[]>([])//establecer animes del usuario
 
