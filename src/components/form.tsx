@@ -11,7 +11,15 @@ interface Animes {
     score: number
     user: object
 }
+/*
+    usuarios registrados:
+    
+    axel@hotmail.com
+    password: 1234
 
+    p@hotmail.com
+    password: 1234
+*/
 function form() {
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")//
