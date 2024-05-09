@@ -1,0 +1,22 @@
+.form{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    padding: 10px;
+    width: 25%;
+    height: 100%;
+    padding: 20px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #888888;
+}
+label, input {
+    font-size: 1.5em; /* Ajusta el tamaño del texto */
+    padding: 10px; /* Añade espacio alrededor del contenido */
+}
+.container{
+
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
