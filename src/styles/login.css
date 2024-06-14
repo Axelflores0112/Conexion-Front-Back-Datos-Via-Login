@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+body{
+background: #4568DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+:root{
+--lg-bg:#f8f3ff;
+--titulo-bg:#9089cc;
+--botom-bg:#674baf;
+--light-pink:#e882e8;
+--img-bg:#eadbff;
+}
+.container-Login{
+    height: 43.75em;
+    width: 65em;
+    margin: 6em auto;/*Se centra el contenido*/
+    display: flex;/*Contenido aun lado del otro*/
+    justify-content: space-between;/*Hacer que contenedor e imagne se alien*/
+    overflow:hidden;
+    border-radius: 10px;
+}
+.login-info-container{
+    width: 50%;
+    display:flex;/*alinear contenido*/
+    flex-direction: column;/*alinear contenido*/
+    align-items: center;/*alinear contenido*/
+    text-align: center;/*alinear contenido*/
+    padding-top:6rem ;/*0.5 anterior*/
+    background-color: var(--lg-bg);
+}
+.image{
+    width: 50%;
+    padding-top: 2rem;
+}
+.titulo{
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--titulo-bg);
+    letter-spacing: 1px;
+}
+.inputs-container{
+    height: 55%;
+    width: 85%;
+    display: flex;/*Alinear elementos*/
+    flex-direction: column;/*Elemntos alineados en vertical*/
+    justify-content: space-around;/*Espacion entre elementos*/
+    align-items: center;
+}
+.input, .btn{
+    width: 98%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+.input{
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;/*??*/
+}
+.input:hover{
+    border: 2px solid var(--botom-bg) ;
+}
+.btn{
+    width:80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;/*Texto en mayusculas*/
+    color: #ffffff;
+    border-radius: 5px;
+    background-color:var(--botom-bg);
+    cursor: pointer;/*Que el mouse haga manita*/
+    border: none;
+}
+.inputs-container p{
+   margin: 0;
+}
+.ancla{
+    color: var(--light-pink);
+}
+
+/*Hacer responsive*/
+@media screen and (max-width:1000px){
+    img{
+        display: none;
+    }
+    .container-Login{
+        width: 70%;
+        margin-top: 5rem;
+    }
+    .login-info-container{
+        width: 100%;
+    }
+}
+@media screen and (max-width:650px){
+    .container-Login{
+        width: 90%;
+    }
+}
+@media screen and (max-width:500px){
+    .inputs-container{
+        flex-direction: column;
+    }
+}

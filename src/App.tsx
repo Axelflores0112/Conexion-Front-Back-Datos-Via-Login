@@ -1,13 +1,17 @@
-import Header from './components/Header'
-import Form from './components/form'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Login from './components/login'
+import Register from './components/register'
+import MainPage from './components/mainPage';
 import './App.css'
 function App() {
   return (
-    <>
-      <Header title='Mi primer react'/>
-      <Form />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element = {<MainPage />}/>
+        <Route path="/login" element = {<Login />}/>
+        <Route path="/register" element = {<Register />}/>
+      </Routes>
+    </Router>
   )
 }
-
 export default App
