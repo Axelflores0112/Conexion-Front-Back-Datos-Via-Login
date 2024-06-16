@@ -51,19 +51,22 @@ function register() {
     }
 
     return (
-        <div className="register-container">
-            <ToastContainer />
-            <div className="register-info-container">
-                <h1 className="titulo">Registro</h1>
-                <form className="inputs-container">
-                    <input className="input" name="nombre" value={name} type="text" placeholder="Nombre" onChange={handleInputChange(setName)} />
-                    <input className="input" name="correo" value={email} type="text" placeholder="Email" onChange={handleInputChange(setEmail)} />
-                    <input className="input" name="clave" value={password} type="password" placeholder="Contraseña" onChange={handleInputChange(setPassword)} />
-                    <button className="btn" id="btn" type="submit" onClick={handleOnClick} >registrar</button>
-                    <p>Tienes cuenta? <span><Link className="ancla" to="/login">Pica aqui</Link></span></p>
-                </form>
+        <body className="body-register">
+            <div className="register-container">
+                <ToastContainer />
+                <div className="register-info-container">
+                    <h1 className="titulo">Registro</h1>
+                    <form className="inputs-container">
+                        <input className="input" name="nombre" value={name} type="text" placeholder="Nombre" onChange={handleInputChange(setName)} />
+                        <input className="input" name="correo" value={email} type="text" placeholder="Email" onChange={handleInputChange(setEmail)} />
+                        <input className="input" name="clave" value={password} type="password" placeholder="Contraseña" onChange={handleInputChange(setPassword)} />
+                        <button className="btn" id="btn" type="submit" onClick={handleOnClick} >registrar</button>
+                        <p>Tienes cuenta? <span><Link className="ancla" to="/login">Pica aqui</Link></span></p>
+                    </form>
+                </div>
             </div>
-        </div>
+        </body>
+
     )
 }
 

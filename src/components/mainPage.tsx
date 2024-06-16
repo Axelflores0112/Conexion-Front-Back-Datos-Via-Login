@@ -110,7 +110,7 @@ function MainPage() {
                         <figure>
                             <a href="#"><img src={logo} alt="logo" /></a>
                             <h2>
-                                <figcaption>AnilisMX</figcaption>
+                                <figcaption>AnilistMX</figcaption>
                             </h2>
                         </figure>
                     </div>
