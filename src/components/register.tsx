@@ -51,7 +51,7 @@ function register() {
     }
 
     return (
-        <body className="body-register">
+        <div className="body-register">
             <div className="register-container">
                 <ToastContainer />
                 <div className="register-info-container">
@@ -65,7 +65,7 @@ function register() {
                     </form>
                 </div>
             </div>
-        </body>
+        </div>
 
     )
 }

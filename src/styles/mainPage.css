@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
 /*Nav-reposonsive*/
-*{
+.body-main{
     box-sizing: border-box;/*ayuda al responsive*/
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: #9089cc;
 }
 :root{
     --hd-bg:#f8f3ff;
@@ -54,7 +55,7 @@
 .menu{
     display: none;
 }
-.header .btn-container .btn button,
+.header .btn-container .btn-login button,
 .header .menu button{
     font-weight: 700;
     padding: 10px 27px;
@@ -66,7 +67,37 @@
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
-.header .btn-container .btn button:hover,
+.header .btn-container .btn-register button,
+.header  button{
+    font-weight: 700;
+    padding: 10px 27px;
+    margin: 5px;
+    color: white;
+    background: #9089cc;
+    border-radius: 15px ;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.header .btn-container .btn button,
+.header  button{
+    font-weight: 700;
+    padding: 10px 27px;
+    margin: 5px;
+    color: white;
+    background: #9089cc;
+    border-radius: 15px ;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.header .btn-container .btn-login button:hover,
+.header .menu button:hover{
+    background-color: #9089cc;
+    color: white;
+    transform: scale(1.1);
+}
+.header .btn-container .btn-register button:hover,
 .header .menu button:hover{
     background-color: #9089cc;
     color: white;
@@ -74,7 +105,7 @@
 }
 
 @media screen and (max-width:900px) {
-    .nav-links, .btn{
+    .nav-links, .btn-login, .btn-register{
         display: none;
     }
     .menu{
@@ -153,6 +184,7 @@
     border-radius: 1em;
 }
 .mision,.vision,.objetivo{ /*4*/
+    box-sizing: border-box;
     width: 100%;   
     display: flex;/*Texto aun lado de la imagen*/
     justify-content: center;/*de aqui*/
@@ -185,7 +217,7 @@ article{ /*7*/
 @media screen and (max-width:900px){
     .main-container{
         margin-top: 15px;
-        padding-right: 20px;
+        padding-right: 25px;
     }
     .mision-title h1,.vision-title h1,.objetivo-title h1{
         font-size: 28px;

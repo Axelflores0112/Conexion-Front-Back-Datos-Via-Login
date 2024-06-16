@@ -16,7 +16,7 @@ function MainPage() {
     };
 
     return (
-        <body>
+        <div className="body-main">
             <header className="header">
                 <div className="logo">
                     <img src={logo} alt="logo"/>
@@ -28,8 +28,8 @@ function MainPage() {
                     </ul>
                 </nav>
                 <div className="btn-container">
-                    <Link  className="btn" to={"/login"}><button>Iniciar sesión</button></Link>
-                    <Link  className="btn" to={"register"}><button>Registrarse</button></Link>
+                    <Link  className="btn-login" to={"/login"}><button>Iniciar sesión</button></Link>
+                    <Link  className="btn-register" to={"/register"}><button>Registrarse</button></Link>
                 </div>
                 <a onClick={openNav} href="#" className="menu"><button>Menu</button></a>
 
@@ -43,7 +43,7 @@ function MainPage() {
                     </div>
                 </div>
             </header>
-            <main>
+            
                 <div className="main-container">
                     <div className="mision-container">
                         <div className="mision-title">
@@ -103,7 +103,7 @@ function MainPage() {
                         </div>
                     </div>
                 </div>
-            </main>
+            
             <footer className="footer">
                 <div className="grupo-1">
                     <div className="box">
@@ -143,7 +143,7 @@ function MainPage() {
                     </small>
                 </div>
             </footer>
-        </body>
+        </div>
     );
 }
 

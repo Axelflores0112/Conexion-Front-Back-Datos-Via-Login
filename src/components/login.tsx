@@ -57,7 +57,7 @@ function login() {
     }
 
     return (
-        <body className="login-body">
+        <div className="login-body">
             <div className="container-Login">
             <ToastContainer />
             <div className="login-info-container">
@@ -71,7 +71,7 @@ function login() {
             </div>
             <img src={ImageLogin} alt="" />
         </div>
-        </body>
+        </div>
 
     )
 }
