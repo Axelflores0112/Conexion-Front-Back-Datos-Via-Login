@@ -70,7 +70,7 @@ function userContent() {
                                 </tr>
                             ))}
                         </tbody>
-                    </table> : <p>no hay datos</p>
+                    </table> : <p>No hay datos</p>
             }
             <div className="btn-section">
                 <button className="btn-create">Agregar</button>
