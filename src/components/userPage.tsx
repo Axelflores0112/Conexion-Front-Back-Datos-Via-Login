@@ -1,15 +1,16 @@
-import React,{useContext} from "react"
+import {useContext, useState} from "react"
 import { UserContext } from '../contexts/UserContext';
+import UserHeader from "./userHeader";
+import UserContent from "./userContent";
 function userPage(){
     const {user}=useContext(UserContext);
+    const [sesion,setSesion]=useState();
     return(
- 
-        <div>
-            <h1>User Page</h1>
-            <h1>hola {user?.name}</h1>
-            <h1>tu email es {user?.email}</h1>
-            <h1>id: {user?.id}</h1>
-            <h1>token: {user?.token}</h1>
+        <div className="body-user">
+            <UserHeader/>
+            <div className="user-content">
+                <UserContent/>
+            </div>
         </div>
     )
 }

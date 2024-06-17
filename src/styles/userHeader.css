@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap');
+:root{
+    --hd-bg:#f8f3ff;
+    --links-color:#9089cc;
+    --botom-bg:#674baf;
+    --light-pink:#e882e8;
+    --img-bg:#eadbff;
+    }
+
+.header{
+    background-color: var(--hd-bg);
+    display: flex;
+    justify-content: flex-end;/*Distribuir contenido de la nav (solo d:flex)*/
+    align-items:center;
+    height: 85px;
+    padding: 5px 10%;
+    font-family: 'Poppins', sans-serif;
+}
+.header .logo{
+    margin-right: auto;/*Enviar logo a la derecha*/
+}
+.header .logo img:hover{
+    transform: scale(1.2);/*logo se crece al poner cursor*/
+}
+.header .logo img{
+    transition: all 0.3s;/*Cambio se vea mejor*/
+}
+.header .logo {
+    cursor: pointer;/*Mouse manita*/
+}
+.header .nav-links{
+    list-style: none;/*Quita puntos de li*/
+    margin: auto 0;/*quitar?*/
+}
+.header .nav-links li{
+    display: inline-block;/*alinea los li*/
+    padding: 0 20px;
+}
+.header .nav-links p{
+    
+    font-size: 700;
+    color: var(--links-color);
+
+}
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+.menu{
+    display: none;
+}
+.header .btn-container .btn-login button,
+.header .menu button{
+    font-weight: 700;
+    padding: 10px 27px;
+    margin: none;
+    color: white;
+    background: #9089cc;
+    border-radius: 15px ;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn-container .btn-login button:hover,
+.header .menu button:hover{
+    background-color: #9089cc;
+    color: white;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:900px) {
+    .nav-links, .btn-login{
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+
+.header a{
+    text-decoration: none;
+}
+.header .overlay{
+    height: 100%;/*de aqui*/
+    width: 0;
+    position: fixed;/*a aqui ya se escondio todo en el boton*/
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #9089cc;
+    overflow: hidden;
+    transition:all 0.3s ease 0s ;
+}
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display:block;/*contenido en vertical*/
+    transition:all 0.3s ease 0s;
+    font-weight: 700;
+    color: white;
+}
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color: var(--botom-bg);
+}
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+@media screen and (max-height:450px) {
+     .header .overlay a{
+        font-size: 20px;
+     }
+     .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+     }
+}
