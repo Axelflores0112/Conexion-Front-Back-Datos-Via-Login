@@ -1,0 +1,70 @@
+.modalBackground {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo gris transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container-update {
+    width: 35%;
+    height: 55%;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: -150px;
+}
+
+.modal-container-update .modal-title-update {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+.modal-form-update{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal-form-update .name-update,.description-update,.genere-update,.score-update{
+    margin: 10px;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+}
+.close-btn-update {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn-update button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal-container-update .modal-footer-update {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container-update .modal-footer-update button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}

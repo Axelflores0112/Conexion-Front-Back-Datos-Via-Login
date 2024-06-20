@@ -63,3 +63,24 @@
     width: 110px;
     cursor: pointer;/*Que el mouse haga manita*/
 }
+.btn-section .btn-create, .btn-delete, .btn-edit{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+.btn-section .btn-create:hover{
+    background-color: #1fd60a;
+    color: white;
+    transform: scale(1.1);
+}
+.btn-section .btn-delete:hover{
+    background-color: #ea0a0a;
+    color: white;
+    transform: scale(1.1);
+}
+.btn-section .btn-edit:hover{
+    background-color: #0c46c5;
+    color: white;
+    transform: scale(1.1);
+}

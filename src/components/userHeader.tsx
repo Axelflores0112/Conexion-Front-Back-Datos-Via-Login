@@ -13,7 +13,10 @@ function userHeader(){
     const closeNav = () => {
         setNavOpen(false);
     };
-
+    const sesionOut=()=>{
+        localStorage.removeItem("sesion")
+        localStorage.removeItem("user")
+    }
     return(
         <header className="header">
             <div className="logo">
@@ -25,7 +28,7 @@ function userHeader(){
                 </ul>
             </nav>
             <div className="btn-container">
-                <Link  className="btn-login" to={"/login"}><button>Cerrar sesión</button></Link>
+                <Link  className="btn-login" to={"/"}><button onClick={sesionOut}>Cerrar sesión</button></Link>
             </div>
             <a onClick={openNav} href="#" className="menu"><button>Menu</button></a>
 

@@ -3,6 +3,9 @@ import { useContext } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from "react";
 import { useEffect } from "react";
+import ModalCreate from "./modalCreate";
+import ModalDelete from "./modalDelete";
+import ModalUpdate from "./modalUpdate";
 import "../styles/userContent.css"
 const API_URL = "http://localhost:3010/";
 interface Animes {
@@ -15,15 +18,24 @@ interface Animes {
 function userContent() {
     const { user } = useContext(UserContext);
     const [animes, setAnimes] = useState<Animes[]>([])
-
+    const [modalContent,setModalContent]= useState<string | null>(null)
     useEffect(() => {
-        const userID = user?.id
-        const token = user?.token
-        if (userID && token) {
-            fetchAnime(userID, token)
+        if (user) {
+            const userid = user.id
+            const token = user.token
+            fetchAnime(userid, token)
         }
     }, [])
-
+    //Modal logic
+    const modalCreate=()=>{
+        setModalContent('create');
+    }
+    const modalDelete=()=>{
+        setModalContent('delete');
+    }
+    const modalUpdate=()=>{
+        setModalContent('update');
+    }
     const fetchAnime = async (id: string, token: string) => {
         try {
             const response = await fetch(`${API_URL}api/v1/animes?userId=${id}`, {
@@ -73,10 +85,13 @@ function userContent() {
                     </table> : <p>No hay datos</p>
             }
             <div className="btn-section">
-                <button className="btn-create">Agregar</button>
-                <button className="btn-edit">Editar</button>
-                <button className="btn-delete">Eliminar</button>
+                <button className="btn-create" onClick={modalCreate}>Agregar</button>
+                <button className="btn-edit" onClick={modalUpdate}>Editar</button>
+                <button className="btn-delete" onClick={modalDelete}>Eliminar</button>
             </div>
+            {modalContent === "create" && <ModalCreate closeModal={setModalContent} fetchAnime={fetchAnime} />}
+            {modalContent === "delete" && <ModalDelete closeModal={setModalContent} fetchAnime={fetchAnime} />}
+            {modalContent === "update" && <ModalUpdate closeModal={setModalContent} fetchAnime={fetchAnime} />}
         </div>
     )
 }

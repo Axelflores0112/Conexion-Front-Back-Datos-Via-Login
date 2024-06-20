@@ -10,7 +10,7 @@ const API_URL = "http://localhost:3010/";
 function login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {setUser} = useContext(UserContext)//funcion para estbalcer usuario de contexto
+    const {setUser,setSesion} = useContext(UserContext)//funcion para estbalcer usuario de contexto
     const navigate = useNavigate()
 
     const logIn = async ({ email, password }: { email: string, password: string }) => {
@@ -27,6 +27,7 @@ function login() {
                 console.log(data)
                 //destructuramos pa tomar info de diferentes niveles del objeto
                 setUser({...data.user,token:data.token})
+                setSesion(true)
                 navigate("/userPage")
             } else {
                 toast.error("Usuario no encontrado", {

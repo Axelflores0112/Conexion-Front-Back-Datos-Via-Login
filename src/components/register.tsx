@@ -2,7 +2,7 @@ import '../styles/register.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
 const API_URL = "http://localhost:3010/";
@@ -11,7 +11,7 @@ function register() {
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
     const [name, setName] = useState<string>("")
-    //const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const RegisterUSer = async ({ email, password, name }: { email: string, password: string, name: string }) => {
         try {
@@ -26,7 +26,7 @@ function register() {
                 toast.success("Usuario creado correctamente", {
                     position: "bottom-center"
                 });
-                //navigate('/login')
+                navigate('/login')
             }
         } catch (error) {
             console.log(error)

@@ -1,0 +1,66 @@
+/*Footer*/
+.user-footer .footer-user{
+    width: 100;
+    background-color: #645F8E;
+    color: white;
+    margin-top: auto;/*footer siempre abajo*/
+}
+.user-footer .footer-user .grupo-1-user{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;/*ceentra contenido*/
+    display: grid;/*de aqui*/
+    grid-template-columns: repeat(3,1fr);/*a aqui es para hecr columnas con d:grid*/
+    grid-gap: 50px;/*Funcion obsoleta*/
+    padding: 45px 0px;
+
+}
+.user-footer .footer-user .grupo-1-user .box-user figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;/*centrar horizontalemente*/
+    align-items: center;/*centra verticalmente*/
+}
+.user-footer .footer-user .grupo-1-user .box-user #titulo-footer-user{
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.user-footer .footer-user .grupo-1-user .box-user p{
+    margin-bottom: 10px;
+}
+.user-footer .footer-user .grupo-1-user .socia-userl a{
+    display: inline-block;/*borra linea de icono*/
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    text-align: center;
+    transition: all 3ms ease;
+}
+.user-footer .footer-user .grupo-1-user .social-user a:hover{
+    background-color: #9089cc;
+}
+.user-footer .footer-user .grupo-2-user{
+    padding: 15px 10px;
+    text-align: center;
+    background-color: 	#645F8E;
+}
+@media screen and (max-width:800px){
+    .user-footer .footer-user .grupo-1-user{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);/*a aqui es para hecr columnas con d:grid*/
+        grid-gap: 30px;/*Funcion obsoleta*/
+        padding: 35px 0px;
+    
+    }
+}
+.overlay {
+    width: 0%;
+    transition: width 0.5s;
+}
+
+.overlay.open {
+    width: 100%;
+}
